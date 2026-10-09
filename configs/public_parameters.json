@@ -1,0 +1,76 @@
+{
+  "release_scope": "partial_parameter_disclosure",
+  "complete_reproduction_configuration": false,
+  "training_interface_defaults": {
+    "epochs": 100,
+    "batch": 32,
+    "imgsz": 640,
+    "optimizer": "MuSGD"
+  },
+  "method_code_defaults": {
+    "class_balance_beta": 0.999,
+    "class_weight_min": 0.5,
+    "class_weight_max": 2.0,
+    "beta_size": 0.5,
+    "tau_size": 0.02,
+    "size_weight_max": 1.5,
+    "lambda_kd": 0.3,
+    "eta_box_kd": 1.0,
+    "teacher_quality_thr": 0.5,
+    "quality_margin": 0.05
+  },
+  "framework_detection_defaults": {
+    "lrf": 0.01,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "loss_gains": {
+      "box": 7.5,
+      "cls": 0.5,
+      "dfl": 1.5
+    },
+    "augmentation": {
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4,
+      "degrees": 0.0,
+      "translate": 0.1,
+      "scale": 0.5,
+      "shear": 0.0,
+      "perspective": 0.0,
+      "flipud": 0.0,
+      "fliplr": 0.5,
+      "bgr": 0.0,
+      "mixup": 0.0,
+      "cutmix": 0.0,
+      "copy_paste": 0.0
+    }
+  },
+  "bdd100k_recovered_command_subset": {
+    "evidence_kind": "saved_recovered_command_text_with_unresolved_path_variables",
+    "full_training_configuration_recovered": false,
+    "method_overrides": {
+      "lambda_kd": 0.2,
+      "eta_box_kd": 0.1,
+      "teacher_quality_thr": 0.05,
+      "quality_margin": 0.0,
+      "use_class_weight": true,
+      "use_size_weight": true,
+      "use_ogdkd": true,
+      "use_gap_weight": false,
+      "student_layers": [
+        17,
+        20,
+        23
+      ],
+      "teacher_layers": [
+        16,
+        19,
+        22
+      ]
+    }
+  },
+  "undisclosed_project_fields": [
+    "lr0",
+    "mosaic"
+  ]
+}

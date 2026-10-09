@@ -1,0 +1,7 @@
+path: ./data/kitti_3cls_yolo
+train: images/train
+val: images/val
+names:
+  0: Car
+  1: Pedestrian
+  2: Cyclist

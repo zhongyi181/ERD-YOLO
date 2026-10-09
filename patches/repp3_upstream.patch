@@ -1,0 +1,10 @@
+--- a/ultralytics/nn/tasks.py
++++ b/ultralytics/nn/tasks.py
+@@ -1604,6 +1604,7 @@
+             DWConvTranspose2d,
+             C3x,
+             RepC3,
++            RepConv,
+             PSA,
+             SCDown,
+             C2fCIB,
